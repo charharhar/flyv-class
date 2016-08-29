@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Week 1 - HTML</title>
+
+	<style>
+		html,body {
+			padding-bottom: 100px;
+		}
+		img {
+			width: 100px;
+			height: 100px;
+		}
+		.table-example {
+			width: 1000px;
+		}
+	
+		.table-example tr th:first-of-type,
+		.table-example tr td:first-of-type {
+			background-color: #fa9393;
+		}
+
+		.force-white { margin: 0 auto; }
+		.force-white tr th, 
+		.force-white tr td {
+			background-color: #fff !important;
+			padding: 10px;
+		}
+ 		
+ 		.bordered tr th,
+		.bordered tr td {
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>&lt;h1&gt;&lt;/h1&gt; Heading 1 (標題)</h1>
+	<h2>&lt;h2&gt;&lt;/h2&gt; Heading 2</h2>
+	<h3>&lt;h3&gt;&lt;/h3&gt; Heading 3</h3>
+	<p>&lt;p&gt;&lt;/p&gt;(內文)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto facilis facere praesentium? Distinctio quae voluptates, natus placeat esse alias aliquam veritatis numquam repudiandae! Veniam magni, quibusdam voluptate, earum numquam vero!</p>
+	<p>&lt;br&gt; 就是line break </p>
+	<p>&lt;hr&gt; 就是horizontal rule (一條線) </p>
+
+	<br><br><hr>
+
+	<h1>特殊的內問有四種, 可以夾在 p 或 h 裡面</h1>
+	<strong>&lt;strong&gt;&lt;/strong&gt; 種體</strong><br>
+	<em>&lt;em&gt;&lt;/em&gt; 斜體</em><br>
+	<span>&lt;span&gt;&lt;/span&gt; 跟 p 一模一樣 可是他不會占滿一整塊</span><br>
+	<a href="index.html">&lt;a&gt;&lt;/a&gt; (anchor) 連結 </a><br><br>
+	<strong>標籤裡可以加Attribute</strong> 
+	<p>ex: anchor 標籤裡可以加"href" 就是連結的位址 href="index.html"</p>
+	<br>
+	<h1>連結有<strong>relative</strong> 跟 <strong>absolute</strong> 位址.</h1>
+	<p>Absolute 就是像一個網址"https://www.flyingV.cc"</p>
+	<p>Relative 就是要看你檔案開啟的位址，就會從那個資料夾開始判斷, 用"../"可以往回上一個資料夾</p>
+
+	<br><br><hr>
+	
+	<h1>&lt;img&gt;&lt;/img&gt;就是圖片標籤</h1>
+	<p>記得要加<strong>src="圖片位址"</strong>attribute</p>
+	<img src="duck.jpg" alt="">
+	<p>圖片也可以是連結, 只要包在&lt;a&gt;裡就可以了!</p>
+	<a href="https://www.google.com" target="_blank">
+		<img src="images/duck2.png" alt="">
+	</a>
+
+	<br><br><hr>
+
+	<h1>項目格式</h1>
+	<h2>&lt;ul&gt;&lt;/ul&gt; 符號格式</h2>
+	<ul>
+		<li>&lt;li&gt;A&lt;/li&gt;</li>
+		<li>&lt;li&gt;B&lt;/li&gt;</li>
+		<li>&lt;li&gt;C&lt;/li&gt;</li>	
+	</ul>
+	<h2>&lt;ol&gt;&lt;/ol&gt; 數字格式 - 自動累加</h2>
+	<ol>
+		<li>&lt;li&gt;one&lt;/li&gt;</li>
+		<li>&lt;li&gt;two&lt;/li&gt;</li>
+		<li>&lt;li&gt;three&lt;/li&gt;</li>
+	</ol>
+	<h2>&lt;li&gt;&lt;/li&gt;</h2>
+	<p>每一個 <strong>li</strong> 就是一項</p>
+
+	<br><br><hr>
+	<h1>表格運用</h1>
+	<table class="table-example bordered">
+		<thead>
+			<tr>
+				<th>原始碼</th>
+				<th>顯示結果</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					&lt;table border=1&gt; <br>
+						&emsp;&lt;thead&gt; <br>
+							&emsp;&emsp;&lt;tr&gt; <br>
+								&emsp;&emsp;&emsp;&lt;th&gt;第一列第一欄&lt;/th&gt; <br>
+								&emsp;&emsp;&emsp;&lt;th&gt;第一列第二欄&lt;/th&gt; <br>
+							&emsp;&emsp;&lt;/tr&gt; <br>
+						&emsp;&lt;/thead&gt; <br>
+						&emsp;&lt;tbody&gt; <br>
+							&emsp;&emsp;&lt;tr&gt; <br>
+								&emsp;&emsp;&emsp;&lt;td&gt;第二列第一欄&lt;/td&gt; <br>
+								&emsp;&emsp;&emsp;&lt;td&gt;第二列第二欄&lt;/td&gt; <br>
+							&emsp;&emsp;&lt;/tr&gt; <br>
+						&emsp;&lt;/tbody&gt; <br>
+					&lt;/table&gt; <br>
+				</td>
+				<td>
+					<table class="force-white" border=1>
+						<thead>
+							<tr>
+								<th>第一列第一欄</th>
+								<th>第一列第二欄</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>第二列第一欄</td>
+								<td>第二列第二欄</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<br><br>
+
+	<table class="table-example bordered">
+		<tr>
+			<td>&lt;table&gt;&lt;/table&gt;</td>
+			<td>此標籤是表格的基本，而其基本設定還有很多。</td>
+		</tr>
+		<tr>
+			<td>&lt;thead&gt;&lt;/thead&gt;</td>
+			<td>此標籤是表格的標題，所有關於表格的標題都該包在這裡面。</td>
+		</tr>
+		<tr>
+			<td>&lt;tbody&gt;&lt;/tbody&gt;</td>
+			<td>此標籤是表格的內容，所有關於表格的內容都該包在這裡面。</td>
+		</tr>
+		<tr>
+			<td>&lt;tr&gt;&lt;/tr&gt;</td>
+			<td>此標籤是列之意，而每列中可有很多的儲存格。</td>
+		</tr>
+		<tr>
+			<td>&lt;th&gt;&lt;/th&gt;</td>
+			<td>此標籤是標題之意，也屬儲存格的一種。其中的文字會自動變為粗體。</td>
+		</tr>
+		<tr>
+			<td>&lt;td&gt;&lt;/td&gt;</td>
+			<td>此標籤是屬一般的資料儲存格。Table Data之意。</td>
+		</tr>
+	</table>
+
+	<br><br><hr>
+
+	<h1>表單</h1>
+	<table class="table-example bordered">
+	<tr>
+		<td>&lt;input type="text"&gt;</td>
+		<td>文字欄位</td>
+		<td><input type="text"></td>
+	</tr>
+	<tr>
+		<td>&lt;textarea&gt;&lt;/textarea&gt;</td>
+		<td>文字輸入方塊</td>
+		<td><textarea rows="5"></textarea></td>
+	</tr>
+	<tr>
+		<td>&lt;select&gt;<br>&emsp;&lt;option&gt;<br>&lt;/select&gt;</td>
+		<td>下拉式表單</td>
+		<td>
+			你的學歷
+			<select>
+				<option>國小
+				<option>國中
+				<option>高中
+				<option>大學
+				<option>研究所 
+				<option>博士
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>&lt;input type="checkbox"&gt;</td>
+		<td>多選核取</td>
+		<td>
+			<input type=checkbox name=favorite>Dog
+			<input type=checkbox name=favorite>Cat
+			<input type=checkbox name=favorite>Elephant
+			<input type=checkbox name=favorite>Anteater
+			<input type=checkbox name=favorite>Monkey
+		</td>
+	</tr>
+	<tr>
+		<td>&lt;input type="radio"&gt;</td>
+		<td>單選核取</td>
+		<td>
+			<input type=radio name=age>10-19
+			<input type=radio name=age>20-29
+			<input type=radio name=age>30-39
+			<input type=radio name=age>40-49
+			<input type=radio name=age>50-59
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&lt;form action="POST"&gt;<br>
+			&emsp;&lt;input type="submit"&gt;<br>
+			&lt;/form&gt;<br>			
+		</td>
+		<td>按鈕 - 執行由 action 後所指定</td>
+		<td><input type=submit></td>
+	</tr>
+</table>
+
+	
+</body>
+</html>
