@@ -3,6 +3,7 @@ html,body {
 }
 
 .square {
+	background-color: #ccc;
 	height: 100px;
 	width: 100px;
 }
@@ -23,4 +24,52 @@ html,body {
 
 .inline {
 	display: inline;
+}
+
+.boxes {
+	width: 800px;
+	height: 200px;
+	border: 5px solid red;
+}
+
+.position-static {
+	position: static;
+}
+
+.position-relative {
+	position: relative;
+}
+
+.second-relative {
+	top: -20px;
+	left: 100px;
+}
+
+.position-absolute {
+	position: absolute;
+	top: 30px;
+	left: 50px;
+}
+
+.position-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+.clearfix {
+	clear: both;
 }
