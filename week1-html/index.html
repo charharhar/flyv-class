@@ -35,7 +35,7 @@
 	</style>
 </head>
 <body>
-
+	
 	<h1>&lt;h1&gt;&lt;/h1&gt; Heading 1 (標題)</h1>
 	<h2>&lt;h2&gt;&lt;/h2&gt; Heading 2</h2>
 	<h3>&lt;h3&gt;&lt;/h3&gt; Heading 3</h3>
@@ -45,8 +45,8 @@
 
 	<br><br><hr>
 
-	<h1>特殊的內問有四種, 可以夾在 p 或 h 裡面</h1>
-	<strong>&lt;strong&gt;&lt;/strong&gt; 種體</strong><br>
+	<h1>特殊的內文有四種, 可以夾在 p 或 h 裡面</h1>
+	<strong>&lt;strong&gt;&lt;/strong&gt; 粗體</strong><br>
 	<em>&lt;em&gt;&lt;/em&gt; 斜體</em><br>
 	<span>&lt;span&gt;&lt;/span&gt; 跟 p 一模一樣 可是他不會占滿一整塊</span><br>
 	<a href="index.html">&lt;a&gt;&lt;/a&gt; (anchor) 連結 </a><br><br>
@@ -109,6 +109,11 @@
 								&emsp;&emsp;&emsp;&lt;td&gt;第二列第一欄&lt;/td&gt; <br>
 								&emsp;&emsp;&emsp;&lt;td&gt;第二列第二欄&lt;/td&gt; <br>
 							&emsp;&emsp;&lt;/tr&gt; <br>
+							&emsp;&emsp;&lt;tr&gt; <br>
+								&emsp;&emsp;&emsp;&lt;td&gt;第三列第一欄&lt;/td&gt; <br>
+								&emsp;&emsp;&emsp;&lt;td&gt;第三列第二欄&lt;/td&gt; <br>
+							&emsp;&emsp;&lt;/tr&gt; <br>
+
 						&emsp;&lt;/tbody&gt; <br>
 					&lt;/table&gt; <br>
 				</td>
@@ -124,6 +129,10 @@
 							<tr>
 								<td>第二列第一欄</td>
 								<td>第二列第二欄</td>
+							</tr>
+							<tr>
+								<td>第三列第一欄</td>
+								<td>第三列第二欄</td>
 							</tr>
 						</tbody>
 					</table>
@@ -181,12 +190,12 @@
 		<td>
 			你的學歷
 			<select>
-				<option>國小
-				<option>國中
-				<option>高中
-				<option>大學
-				<option>研究所 
-				<option>博士
+				<option>國小</option>
+				<option>國中</option>
+				<option>高中</option>
+				<option>大學</option>
+				<option>研究所</option>
+				<option>博士</option>
 			</select>
 		</td>
 	</tr>
@@ -202,19 +211,29 @@
 		</td>
 	</tr>
 	<tr>
-		<td>&lt;input type="radio"&gt;</td>
+		<td>&lt;input type="radio" name="name"&gt;</td>
 		<td>單選核取</td>
 		<td>
-			<input type=radio name=age>10-19
-			<input type=radio name=age>20-29
-			<input type=radio name=age>30-39
-			<input type=radio name=age>40-49
-			<input type=radio name=age>50-59
+			<strong>Ethnicity</strong>
+			<input type="radio" name="ethnic">Asian
+			<input type="radio" name="ethnic">American
+			<input type="radio" name="ethnic">Black
+			<br>
+			<strong>Gender</strong>
+			<input type="radio" name="gender">Male
+			<input type="radio" name="gender">Female
+			<br>
+			<strong>Age</strong>
+			<input type="radio" name="age">30-39
+			<input type="radio" name="age">40-49
+			<input type="radio" name="age">50-59
 		</td>
 	</tr>
 	<tr>
 		<td>
 			&lt;form action="POST"&gt;<br>
+			&emsp;&lt;button&gt;<br>
+			&emsp;-or-<br>
 			&emsp;&lt;input type="submit"&gt;<br>
 			&lt;/form&gt;<br>			
 		</td>
