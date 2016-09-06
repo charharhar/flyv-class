@@ -5,6 +5,17 @@
 	<title>Week 2 and 3 - CSS</title>
 
 	<link rel="stylesheet" href="styles.css">
+
+	<style>
+		.same-class {
+			color: purple;
+		}
+
+		#unique-id {
+			color: red;
+		}
+	</style>
+
 </head>
 <body>
 	
@@ -19,9 +30,9 @@
 	</strong></p>
 	<p>選擇器 (Selector)</p>
 	<ol>
-		<li>Element - body</li>
-		<li>Class</li>
-		<li>ID</li>
+		<li class="same-class second-class">Element - body</li>
+		<li class="same-class">Class</li>
+		<li class="same-class" id="unique-id">ID</li>
 	</ol>
 
 	<br><br><hr>
@@ -35,8 +46,8 @@
 	<p>三種顏色寫法</p>
 	<ol>
 		<li>Color name - black</li>
-		<li>RGB - rgb(0, 0, 0)</li>
-		<li>Hex - #000000</li>
+		<li>RGB - rgb(0, 0, 0) 0-255</li>
+		<li>Hex - #000000 0-F</li>
 	</ol>
 
 	<br><br><hr>
@@ -54,6 +65,7 @@
 
 	<br><br>
 	<h1>display: none;</h1>
+	<p style="display: none;">hihihi</p>
 
 	<br><br><hr>
 
@@ -92,6 +104,14 @@
 	<div class="square float-left"></div>
 	<div class="clearfix"></div>
 	<div class="boxes"></div>
+
+	<br><br><hr>
+	<h1>Margin &amp; Padding</h1>
+
+	<p>margin: 5px</p>
+	<div class="square"></div>
+
+	<p>padding: 5px</p>
 
 </body>
 </html>
